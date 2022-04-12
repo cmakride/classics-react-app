@@ -7,6 +7,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ClassicList from './pages/ClassicList/ClassicList'
+import ClassicDetails from './pages/ClassicDetails/ClassicDetails'
 
 //Services
 import * as authService from './services/authService'
@@ -44,6 +45,10 @@ const App = () => {
         <Route
           path="/classics"
           element={<ClassicList classics={classics}/>}
+        />
+        <Route
+          path="/classics/:id"
+          element={<ClassicDetails user={user}/>}
         />
         <Route
           path="/signup"
