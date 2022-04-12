@@ -1,15 +1,20 @@
-import { useState } from 'react'
+// Components
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
+
+//Services
 import * as authService from './services/authService'
+import * as classicsService from './services/classics'
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [classics, setClassics] = useState([])
+  const [user, setUser] = useState(authService.getUser())
   console.log(user)
 
   const handleLogout = () => {
@@ -21,6 +26,14 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await classicsService.getAll()
+      setClassics(data)
+    }
+    fetchData()
+  }, [])
 
   return (
     <>
