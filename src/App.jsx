@@ -8,6 +8,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ClassicList from './pages/ClassicList/ClassicList'
 import ClassicDetails from './pages/ClassicDetails/ClassicDetails'
+import ClassicForm from './Forms/ClassicForm'
 
 //Services
 import * as authService from './services/authService'
@@ -27,6 +28,13 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+  const updateClassic = () => {
+    console.log("sanity Update Classic")
+  }
+
+  const addClassic = () => {
+    console.log("Sanity add Classic")
   }
 
   useEffect(() => {
@@ -49,6 +57,14 @@ const App = () => {
         <Route
           path="/classics/:id"
           element={<ClassicDetails user={user}/>}
+        />
+        <Route
+          path="/classics/:id/edit"
+          element={<ClassicForm updateClassic={updateClassic} user={user}/>}
+        />
+        <Route
+          path="/classics/new"
+          element={<ClassicForm addClassic={addClassic} user={user}/>}
         />
         <Route
           path="/signup"
