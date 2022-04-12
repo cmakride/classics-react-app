@@ -18,3 +18,24 @@ try{
   throw err
 }
 }
+
+export const create =  async (classic) => {
+  try{
+    const res = await fetch(BASE_URL,{
+      method: "POST",
+      headers: {
+        'content-type': 'application/json',
+        'Authorization' : `Bearer ${tokenService.getToken()}`
+      },
+      body: JSON.stringify(classic)
+    })
+    return await res.json()
+
+  } catch (err){
+    throw err
+  }
+}
+
+export const update =  async (classic) => {
+  console.log("SANITY SERVICES UPDATE CLASSIC")
+}

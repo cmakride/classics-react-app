@@ -29,12 +29,21 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
-  const updateClassic = () => {
-    console.log("sanity Update Classic")
+
+  const updateClassic = async (classicData) => {
+    const updatedClassic = await classicsService.update(classicData)
+    setClassics(classics.map(classic => (
+      classic.id === updatedClassic.id ? updatedClassic : classic
+      )))
   }
 
-  const addClassic = () => {
-    console.log("Sanity add Classic")
+  const addClassic = async (classicData) => {
+    const newClassic = await classicsService.create(classicData)
+    setClassics([...classics,newClassic])
+  }
+
+  const deleteClassic = () => {
+    console.log("Delete Me")
   }
 
   useEffect(() => {
