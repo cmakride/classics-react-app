@@ -11,31 +11,48 @@ export const getAll = async () => {
 }
 
 export const getOne = async (id) => {
-try{
-  const res = await fetch(`${BASE_URL}${id}`)
-  return await res.json()
-} catch(err){
-  throw err
-}
+  try {
+    const res = await fetch(`${BASE_URL}${id}`)
+    return await res.json()
+  } catch (err) {
+    throw err
+  }
 }
 
-export const create =  async (classic) => {
-  try{
-    const res = await fetch(BASE_URL,{
+export const create = async (classic) => {
+  try {
+    const res = await fetch(BASE_URL, {
       method: "POST",
       headers: {
         'content-type': 'application/json',
-        'Authorization' : `Bearer ${tokenService.getToken()}`
+        'Authorization': `Bearer ${tokenService.getToken()}`
       },
       body: JSON.stringify(classic)
     })
     return await res.json()
 
-  } catch (err){
+  } catch (err) {
     throw err
   }
 }
 
-export const update =  async (classic) => {
-  console.log("SANITY SERVICES UPDATE CLASSIC")
+export const update = async (classic) => {
+  try {
+    const res = await fetch(`${BASE_URL}${classic.id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${tokenService.getToken()
+          }`
+      },
+      body: JSON.stringify(classic)
+    })
+    return await res.json()
+  } catch (err) {
+    throw err
+  }
+}
+
+export const deleteOne = async (id) => {
+
 }
