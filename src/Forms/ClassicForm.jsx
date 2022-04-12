@@ -27,7 +27,7 @@ const ClassicForm = ({updateClassic,addClassic,user}) => {
       setForm({
         id: data.classic.id,
         name: data.classic.name,
-        category: data.classic.description,
+        category: data.classic.category,
         description: data.classic.description,
         image: data.classic.image
       })
