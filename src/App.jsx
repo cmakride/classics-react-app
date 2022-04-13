@@ -9,6 +9,7 @@ import Profiles from './pages/Profiles/Profiles'
 import ClassicList from './pages/ClassicList/ClassicList'
 import ClassicDetails from './pages/ClassicDetails/ClassicDetails'
 import ClassicForm from './Forms/ClassicForm'
+import Confirmation from './pages/Confirmation/Confirmation'
 
 //Services
 import * as authService from './services/authService'
@@ -34,16 +35,17 @@ const App = () => {
     const updatedClassic = await classicsService.update(classicData)
     setClassics(classics.map(classic => (
       classic.id === updatedClassic.id ? updatedClassic : classic
-      )))
+    )))
   }
 
   const addClassic = async (classicData) => {
     const newClassic = await classicsService.create(classicData)
-    setClassics([...classics,newClassic])
+    setClassics([...classics, newClassic])
   }
 
-  const deleteClassic = () => {
-    console.log("Delete Me")
+  const deleteClassic = async (id) => {
+    await classicsService.deleteOne(id)
+    setClassics(classics.filter(classic => classic.id !== parseInt(id)))
   }
 
   useEffect(() => {
@@ -61,20 +63,24 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/classics"
-          element={<ClassicList classics={classics}/>}
+          element={<ClassicList classics={classics} />}
         />
         <Route
           path="/classics/:id"
-          element={<ClassicDetails user={user}/>}
+          element={<ClassicDetails user={user} />}
         />
         <Route
           path="/classics/:id/edit"
-          element={<ClassicForm updateClassic={updateClassic} user={user}/>}
+          element={<ClassicForm updateClassic={updateClassic} user={user} />}
         />
         <Route
           path="/classics/new"
-          element={<ClassicForm addClassic={addClassic} user={user}/>}
+          element={<ClassicForm addClassic={addClassic} user={user} />}
         />
+        <Route path="/classics/:id/confirmation" element={
+          <Confirmation deleteClassic={deleteClassic} user={user} />
+
+        } />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
