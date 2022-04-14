@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as authService from '../../services/authService'
+import '../../styles/Form.css'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -37,12 +38,12 @@ const SignupForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      
-    >
-      <div>
+    <section className='form-container'>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
+
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -52,8 +53,8 @@ const SignupForm = props => {
           name="name"
           onChange={handleChange}
         />
-      </div>
-      <div>
+
+
         <label htmlFor="email">Email</label>
         <input
           type="text"
@@ -63,8 +64,8 @@ const SignupForm = props => {
           name="email"
           onChange={handleChange}
         />
-      </div>
-      <div>
+
+
         <label htmlFor="password" >Password</label>
         <input
           type="password"
@@ -74,8 +75,8 @@ const SignupForm = props => {
           name="password"
           onChange={handleChange}
         />
-      </div>
-      <div>
+
+
         <label htmlFor="confirm">
           Confirm Password
         </label>
@@ -87,16 +88,18 @@ const SignupForm = props => {
           name="passwordConf"
           onChange={handleChange}
         />
-      </div>
-      <div>
-        <button disabled={isFormInvalid()}>
-          Sign Up
-        </button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+
+
+        <div>
+          <button disabled={isFormInvalid()}>
+            Sign Up
+          </button>
+          <Link to="/">
+            <button>Cancel</button>
+          </Link>
+        </div>
+      </form>
+    </section>
   )
 }
 
