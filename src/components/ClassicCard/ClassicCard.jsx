@@ -12,6 +12,9 @@ const ClassicCard = ({ classic }) => {
         </div>
         <div className='card-text'>
         <h2 className='card-title'>{classic.name}</h2>
+        <p>{classic.category}</p>
+        
+        <p>{classic.description}</p>
         </div>
       
     </Link>

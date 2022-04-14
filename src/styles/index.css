@@ -1,5 +1,10 @@
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
+  background: url(../assets/dark-vintage-wall-background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* The Universal Selector */
@@ -33,6 +38,7 @@ body{
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --link-hover-color: rgb(16, 56, 158);
   --text-color: rgb(10, 13, 10);
+  --text-color-dark: rgb(246, 244, 184);
   --borders: rgb(48, 50, 52) solid 2px;
 
 
