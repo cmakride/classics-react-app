@@ -34,7 +34,8 @@ body{
   --link-hover-color: rgb(16, 56, 158);
   --text-color: rgb(10, 13, 10);
   min-height: 100vh;
-  min-width: 100vh;
+  min-width: 100%;
+
 }
 
 nav {
@@ -46,10 +47,6 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-main {
-  width: 100vw;
 }
 
 nav a {
