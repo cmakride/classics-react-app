@@ -6,10 +6,10 @@ import { getOne } from '../services/classics'
 
 import ClassicInput from './ClassicInput'
 
-const ClassicForm = ({updateClassic,addClassic,user}) => {
-  const {id} = useParams()
+const ClassicForm = ({ updateClassic, addClassic, user }) => {
+  const { id } = useParams()
   const navigate = useNavigate()
-  const [form,setForm] = useState({})
+  const [form, setForm] = useState({})
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,24 +38,24 @@ const ClassicForm = ({updateClassic,addClassic,user}) => {
 
 
 
-  return ( 
+  return (
     <>
-    <div className="page-header">
-        {id
-          ? <h1>Edit Classic</h1>
-          : <><h1>Add A Classic</h1></>
-        }
-    </div>
 
       <section className="form-container">
+        <div className="page-header">
+          {id
+            ? <h1>Edit Classic</h1>
+            : <><h1>Add A Classic</h1></>
+          }
+        </div>
         <form onSubmit={handleSubmit}>
           <ClassicInput form={form} handleChange={handleChange} />
           <button type="submit" className="btn submit">Submit!</button>
         </form>
       </section>
-    
+
     </>
-   );
+  );
 }
- 
+
 export default ClassicForm;

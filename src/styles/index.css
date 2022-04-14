@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+  
+}
+
+#root {
+  width: 100vw;
+}
+
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+  --font-med: 1.7rem;
+  --card-border-radius: 6px;
+  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --link-hover-color: rgb(16, 56, 158);
+  --text-color: rgb(10, 13, 10);
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+nav {
+  /* margin: 10px; */
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  width: 100vw;
+}
+
+nav a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a:hover {
+  color: var(--link-hover-color)
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 8px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav li:hover {
+  cursor: pointer;
+}
