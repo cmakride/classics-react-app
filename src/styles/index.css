@@ -19,7 +19,7 @@ in most browser configurations this will be 10px */
 }
 
 #root {
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 body{
@@ -33,6 +33,9 @@ body{
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --link-hover-color: rgb(16, 56, 158);
   --text-color: rgb(10, 13, 10);
+  --borders: rgb(48, 50, 52) solid 2px;
+
+
   min-height: 100vh;
   min-width: 100%;
 
