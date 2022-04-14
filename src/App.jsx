@@ -4,7 +4,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
-import Landing from './pages/Landing/Landing'
+import Home from './pages/Home/Home'
 import Profiles from './pages/Profiles/Profiles'
 import ClassicList from './pages/ClassicList/ClassicList'
 import ClassicDetails from './pages/ClassicDetails/ClassicDetails'
@@ -14,6 +14,7 @@ import Confirmation from './pages/Confirmation/Confirmation'
 //Services
 import * as authService from './services/authService'
 import * as classicsService from './services/classics'
+import { SliderData } from './components/Slider/SliderData'
 
 const App = () => {
   const navigate = useNavigate()
@@ -60,7 +61,7 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} classics={classics} />} />
+        <Route path="/" element={<Home user={user} classics={classics} slides={SliderData} />} />
         <Route
           path="/classics"
           element={<ClassicList classics={classics} />}
