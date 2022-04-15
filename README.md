@@ -1,70 +1,43 @@
-# Flask - React JWT Auth Template - Front End
+# Classics
+A place to create and view classics of every category
 
-This is the front end of a decoupled Flask React app that includes JWT Authentication.
+## [Link To The App Here](https://theclassics.netlify.app/classics "Cocktail Foundations")
 
-When combined with the back end found [here](https://github.com/SEI-Remote/flask-api-auth-template), you'll have all you need to build a full stack Flask React app!
+![alt text](./src/assets/readme01.png)
 
-Use this to go build things! 🚀
+![alt text](./src/assets/readme02.png)
 
-## To Use This Template
+## About:
+This app uses python and flask for a backend server and react for a frontend server. 
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+## How To Use:
+1. Register/Login to an account
+2. View, Edit, Delete your classics
 
-```bash
-git clone https://github.com/SEI-Remote/flask-react-jwt-auth-template-frontend.git <name-of-your-app-here>
-cd <name-of-your-app-here>-front-end
-```
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
+## Technologies Used:
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
 
-Re-initialize a git repository:
 
-```bash
-git init
-```
 
-Use the GitHub CLI to create a new project repository on GitHub:
 
-```bash
-gh repo create <name-of-your-app-here>-front-end
-```
 
-Run `npm i` to fetch the template's dependencies:
 
-```bash
-npm i
-```
 
-touch a `.env` file:
+                   
+## Future Enhancements:
 
-```bash
-touch .env
-```
+1. Style Improvements
+2. Picture Upload in create classic
+3. Logo add
 
-Fill it with the following:
-
-```
-REACT_APP_API_URL=http://127.0.0.1:5000
-```
-
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!# Cclassics-front-end
-# Cclassics-front-end
-# Cclassics-front-end
