@@ -5,7 +5,7 @@
 /* font-family: 'Lalezar', cursive; */
 
 .show-card-container {
- /* border:1px solid black ; */
+ 
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .show-card{
-  width: 100%;
+  max-width: 730px;
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
@@ -64,6 +64,7 @@
   place-self: center;
   
 }
+
 
 
 

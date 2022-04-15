@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+
+/* font-family: 'Lalezar', cursive; */
+
 html {
   box-sizing: border-box;
   background: url(../assets/dark-back.jpeg) no-repeat center center fixed; 
@@ -23,13 +29,9 @@ in most browser configurations this will be 10px */
   
 }
 
-#root {
-  /* width: 100vw; */
-}
-
 body{
   margin: 0;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   flex-direction: column;
  
@@ -40,8 +42,12 @@ body{
   --link-hover-color: rgb(16, 56, 158);
   --text-color: rgb(10, 13, 10);
   --text-color-dark: rgb(246, 244, 184);
+  --text-color-light: rgb(0, 0, 0);
   --borders: rgb(48, 50, 52) solid 2px;
   --button-bg: rgb(245, 245, 245);
+
+  --nav-bg-ff: rgba(98, 137, 157, 0.9);
+  --borders: rgb(17, 17, 17) solid 2px;
 
 
   min-height: 100vh;
@@ -50,7 +56,10 @@ body{
 }
 
 nav {
-  margin: 10px;
+  width: 100%;
+  font-family: 'Lalezar', cursive;
+  background: var(--nav-bg-ff);
+  border-bottom: var(--borders);
 
 }
 
@@ -103,4 +112,5 @@ nav li:hover {
   text-decoration: none;
   font-size: var(--font-l);
   background-color: var(--button-bg);
+  color: var(--text-color-light);
 }

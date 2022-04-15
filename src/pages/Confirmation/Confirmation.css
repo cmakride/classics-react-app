@@ -1,0 +1,16 @@
+.confirmation-card-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.confirmation-card{
+  max-width: 400px;
+  background-color: rgb(186, 186, 182);
+  margin-top: 5px;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 5%;
+}

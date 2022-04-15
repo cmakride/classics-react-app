@@ -6,6 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
         <nav>
           <ul>
+            <li><Link to="/">Home</Link></li>
             <li>Welcome, {user.name}</li>
             <li><Link to="/classics/new">Create Classic</Link></li>
             <li><Link to="/classics">Classics</Link></li>
@@ -16,6 +17,7 @@ const NavBar = ({ user, handleLogout }) => {
       :
         <nav>
           <ul>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/login">Log In</Link></li>
             <li><Link to="/signup">Sign Up</Link></li>
           </ul>
