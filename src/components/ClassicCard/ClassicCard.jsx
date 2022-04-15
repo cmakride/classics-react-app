@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import './ClassicCard.css'
 
 const ClassicCard = ({ classic }) => {
   return (

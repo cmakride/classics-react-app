@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+
+/* font-family: 'Lalezar', cursive; */
+
+.show-card-container {
+ /* border:1px solid black ; */
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+
+ 
+}
+
+.show-card{
+  width: 100%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text-color-dark);
+  box-shadow: var(--card-box-shadow);
+  background: rgb(80, 80, 80);
+  background: linear-gradient(145deg, rgb(49, 49, 49) 0%, rgb(28, 28, 28) 44%, rgb(113, 113, 113) 100%);
+
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 0.5fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "img"
+    "card-text"; 
+  justify-items: center;
+  
+
+}
+
+.show-img-container{
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.show-img {
+  width: 320px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 5%;
+}
+.show-card-text{
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: card-text;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.show-actions{
+  place-self: center;
+  
+}
+
+
+
+

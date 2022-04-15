@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url(../assets/dark-vintage-wall-background.jpg) no-repeat center center fixed; 
+  background: url(../assets/dark-back.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,12 +34,14 @@ body{
   flex-direction: column;
  
   --font-med: 1.7rem;
+  --font-l: 1.8rem;
   --card-border-radius: 6px;
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --card-box-shadow: 5px 5px 6px -1px rgb(20, 20, 20);
   --link-hover-color: rgb(16, 56, 158);
   --text-color: rgb(10, 13, 10);
   --text-color-dark: rgb(246, 244, 184);
   --borders: rgb(48, 50, 52) solid 2px;
+  --button-bg: rgb(245, 245, 245);
 
 
   min-height: 100vh;
@@ -86,4 +88,19 @@ nav li {
 
 nav li:hover {
   cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-width: 2px;
+  border-radius: 6px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: black;
+  font-family: inherit;
+  text-decoration: none;
+  font-size: var(--font-l);
+  background-color: var(--button-bg);
 }
