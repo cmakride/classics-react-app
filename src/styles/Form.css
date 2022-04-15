@@ -4,10 +4,7 @@
   font-family: inherit;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
   margin: 0px 3px 0px 3px;
-  box-shadow: var(--card-box-shadow);
-  border-radius: var(--card-border-radius);
 }
 
 .form-container h1 {
@@ -24,6 +21,8 @@
 .form-container form {
   border: var(--borders);
   padding: 10px 25px 30px 25px;
+  box-shadow: var(--card-box-shadow);
+  border-radius: var(--card-border-radius);
 }
 
 .form-container .btn {
